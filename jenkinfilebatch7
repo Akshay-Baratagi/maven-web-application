@@ -1,4 +1,5 @@
 node{
+properties([buildDiscarder(logRotator(artifactDaysToKeepStr: '', artifactNumToKeepStr: '', daysToKeepStr: '', numToKeepStr: '2'))])
     stage('checkout'){
         git branch: 'main', credentialsId: 'c947e425-c62d-4ca8-8ccf-58bbbc75baa0', url: 'https://github.com/Akshay-Baratagi/maven-web-application.git'
     }
